@@ -11,9 +11,9 @@ Researcher클래스(연구하기)가 같은 선상에 위치해 있을 것이고
 것이고 Researcher클래스(연구하기) 밑으로 파생된 클래스인 Professor클래스(가르치기)가 위치해 있을 것이라고 생각한다.
 
 예제 8-1 
-기본 클래스인 Point클래스를 작성하는데는 큰 문제 없이 작성을 했고 파생클래스인 ColorPoint클래스가 Point클래스를 상속받도록 class ColorPoint:public Point
-를 작성해서 상속받을 수 있도록 하였고 ColorPoint클래스 안에 어떤 것이 들어가야하는지를 몰라서 그 부분은 작성하는데 ppt를 조금 보고 코드를 작성하여 
-돌려봤더니 잘 돌아갔다.
+기본 클래스인 Point클래스를 작성하는데는 큰 문제 없이 작성을 했고 파생클래스인 ColorPoint클래스가 Point클래스를 상속받도록 
+class ColorPoint:public Point를 작성해서 상속받을 수 있도록 하였고 ColorPoint클래스 안에 어떤 것이 들어가야하는지를 몰라서 그 부분은 작성하는데 
+ppt를 조금 보고 코드를 작성하여 돌려봤더니 잘 돌아갔다.
 
 업 캐스팅:
 파생클래스의 포인터가 기본 클래스의 포인터에 치환이 되는 것을 말한다.
@@ -26,5 +26,5 @@ Researcher클래스(연구하기)가 같은 선상에 위치해 있을 것이고
 먼저 ColorPoint 클래스에서 x 및 y는 Point 클래스의 protected 멤버이므로 파생 클래스인 ColorPoint에서 직접 접근할 수 없기 때문에 오류가 난다.
 다음은 equals 함수의 매개변수로 ColorPoint p를 받아들이지만, 함수 내부에서 p 객체를 사용하는 경우 x 및 y에 접근할 때 p.x 및 p.y를 사용하며, 이는 
 ColorPoint 클래스의 protected 멤버이므로 직접 접근할 수 없기 때문에 오류가 난다.
-마지막으로 equals 함수 내에서 color에 접근할 때 p.color를 사용하고 있지만, ColorPoint 클래스의 private 멤버인 color를 직접 접근할 수 없기 때문에 오류가 
-발생한다.
+마지막으로 equals 함수 내에서 color에 접근할 때 p.color를 사용하고 있지만, ColorPoint 클래스의 private 멤버인 color를 직접 접근할 수 없기 때문에 
+오류가 발생한다.
